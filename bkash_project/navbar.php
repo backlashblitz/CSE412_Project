@@ -1,5 +1,5 @@
 <div class="navbar">
-    <div class="logo">Takai Jibon</div>
+    <div class="logo">LenDen</div>
     <nav>
         <a href="#">Services</a>
         <a href="#">Business</a>
