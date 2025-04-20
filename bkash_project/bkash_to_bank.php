@@ -87,7 +87,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 </head>
 <body class="bkash-to-bank-page">
     <div class="bkash-to-bank-container">
-        <h2>Transfer from bKash to Bank</h2>
+        <h2>Transfer from LenDen to Bank</h2>
 
         <form method="POST" action="">
             <label for="amount">Amount to transfer (in ৳):</label>
