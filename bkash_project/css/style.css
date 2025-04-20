@@ -1,0 +1,1471 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-image: url('images/bg.jpg'); /* Path to your image */
+    background-size: cover; /* Ensure the image covers the entire screen */
+    background-position: center; /* Center the image */
+    background-attachment: fixed; /* Make sure the background is fixed */
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+/* Navbar */
+.navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background: linear-gradient(135deg, #3b7c8b, #88a2b5); /* Gradient Background */
+    color: white;
+    position: fixed;
+    top: 2px;
+    left: 0;
+    border-radius: 30px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); /* Subtle Shadow */
+    z-index: 10;
+}
+
+.navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.navbar nav {
+    display: flex;
+    gap: 20px;
+}
+
+.navbar nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;  /* Make text bold */
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+.navbar nav a:hover {
+    color: #ff7a00;  /* Highlight on hover */
+}
+
+/* Navbar Actions (Language Toggle and Logout) */
+.navbar-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.language-toggle {
+    padding: 6px 12px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 30px;
+    background-color: #fff;
+    color: #333;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.language-toggle:hover {
+    background-color: #ff7a00;
+    color: white;
+    transform: scale(1.05);
+}
+
+.logout-btn {
+    background-color: white;
+    color: #4f6d7a;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 30px; /* Rounded Button */
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.logout-btn:hover {
+    background-color: #e3e9f0;
+    transform: scale(1.05);
+}
+
+/* Dashboard Container */
+.container {
+    width: 100%;
+    max-width: 900px;
+    margin-top: 200px; /* Adjusted for navbar */
+    text-align: center;
+}
+
+/* Balance Card */
+.balance-card {
+    background: linear-gradient(135deg, #4f6d7a, #88a2b5);
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); /* Shadow Effect */
+}
+
+.balance-card h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.balance-card .amount {
+    font-size: 28px; /* Larger Amount Font */
+    font-weight: bold;  /* Make Amount Bold */
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* Shortcuts Grid */
+.shortcuts-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.shortcut-item {
+    text-decoration: none;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.shortcut-item img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+}
+
+.shortcut-item a {
+    text-decoration: none;
+    color: #4f6d7a;
+    font-weight: bold;
+    display: block;
+    font-size: 18px;  /* Increased font size */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s ease, font-weight 0.3s ease;
+}
+
+.shortcut-item a:hover {
+    color: #ff7a00;  /* Highlight text on hover */
+    font-weight: bolder;  /* Make text bolder on hover */
+}
+
+.shortcut-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9; /* Slight background color change */
+}
+
+.shortcut-item img:hover {
+    transform: scale(1.2); /* Slight enlarge effect on hover */
+}
+
+/* Register & Login Section */
+.auth-container {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 320px;
+    margin-top: 20px;
+}
+
+.auth-container h2 {
+    margin-bottom: 15px;
+    color: #4f6d7a;
+}
+
+.auth-container input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.auth-container button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4f6d7a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.auth-container button:hover {
+    background-color: #365e6c;
+}
+
+.auth-container p {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.auth-container p a {
+    color: #4f6d7a;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.auth-container p a:hover {
+    text-decoration: underline;
+}
+
+/* Forgot/Reset Password Link */
+.forgot-password-link {
+    margin-top: 15px;
+    text-align: right; /* Aligning the text to the right */
+}
+
+.forgot-password-link a {
+    color: #4f6d7a; /* You can customize this color */
+    font-size: 12px; /* Make the font size smaller */
+    text-decoration: none;
+    font-weight: normal; /* Make it lighter */
+}
+
+.forgot-password-link a:hover {
+    text-decoration: underline;
+}
+
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f7f8fc;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Reset Password Page */
+.reset-password-container {
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.reset-password-container h2 {
+    color: #4f6d7a;
+    margin-bottom: 30px;
+}
+
+.reset-password-container label {
+    font-size: 16px;
+    margin-bottom: 10px;
+    display: block;
+    color: #333;
+}
+
+.reset-password-container input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.reset-password-container button {
+    width: 100%;
+    padding: 12px;
+    background-color: #4f6d7a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.reset-password-container button:hover {
+    background-color: #365e6c;
+}
+
+.reset-password-container a {
+    color: #4f6d7a;
+    font-size: 14px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 10px;
+    display: block;
+}
+
+.reset-password-container a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .reset-password-container {
+        width: 90%;
+        padding: 20px;
+    }
+}
+
+
+/* Send Money Page */
+/* Send Money Page Background */
+/* Send Money Page Background */
+.send-money-page {
+    background-image: url('../images/bg2.jpg'); /* Adjust the path if needed */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Send Money Container */
+.send-money-container {
+    width: 80%;
+    max-width: 500px;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    z-index: 1;
+}
+
+/* Title and Form */
+.send-money-container h2 {
+    color: #4f6d7a;
+    margin-bottom: 20px;
+}
+
+.send-money-container label {
+    font-size: 16px;
+    margin-bottom: 5px;
+    display: block;
+    color: #333;
+}
+
+.send-money-container select, 
+.send-money-container input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.send-money-container input[type="password"] {
+    font-family: 'Arial', sans-serif;
+}
+
+.send-money-container button {
+    width: 100%;
+    padding: 12px;
+    background-color: #4f6d7a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.send-money-container button:hover {
+    background-color: #365e6c;
+}
+
+.send-money-container a {
+    color: #4f6d7a;
+    font-size: 14px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.send-money-container a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .navbar nav {
+        margin-top: 10px;
+    }
+
+    .container, .auth-container, .send-money-container {
+        width: 90%;
+    }
+
+    .shortcuts-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* Mobile Recharge Page Background */
+.recharge-page {
+    background-image: url('../images/bg2.jpg'); /* Adjust the path to the image */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh; /* Ensure the background covers the full page */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Recharge Container */
+.recharge-container {
+    width: 80%;
+    max-width: 500px;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 80px;
+    text-align: center;
+    z-index: 1; /* Make sure the content is above the background */
+}
+
+/* Title and Form */
+.recharge-container h2 {
+    color: #4f6d7a;
+    margin-bottom: 20px;
+}
+
+.recharge-container label {
+    font-size: 16px;
+    margin-bottom: 5px;
+    display: block;
+    color: #333;
+}
+
+.recharge-container input, .recharge-container select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.recharge-container input[type="password"] {
+    font-family: 'Arial', sans-serif;
+}
+
+.recharge-container button {
+    width: 100%;
+    padding: 12px;
+    background-color: #4f6d7a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.recharge-container button:hover {
+    background-color: #365e6c;
+}
+
+.recharge-container a {
+    color: #4f6d7a;
+    font-size: 14px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.recharge-container a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .navbar nav {
+        margin-top: 10px;
+    }
+
+    .recharge-container {
+        width: 90%;
+    }
+}
+
+
+/* Add Money Page Background */
+.add-money-page {
+    background-image: url('../images/bg2.jpg'); /* Replace with the correct path to your image */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh; /* Ensures the background covers the full page */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Add Money Container */
+.add-money-container {
+    width: 80%;
+    max-width: 500px;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background to see the image */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 80px;
+    text-align: center;
+    z-index: 1; /* To make sure it’s above the background */
+}
+
+/* Existing Styles for Add Money Container */
+.add-money-container h2 {
+    color: #4f6d7a;
+    margin-bottom: 20px;
+}
+
+.add-money-container label {
+    font-size: 16px;
+    margin-bottom: 5px;
+    display: block;
+    color: #333;
+}
+
+.add-money-container input, .add-money-container select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.add-money-container button {
+    width: 100%;
+    padding: 12px;
+    background-color: #4f6d7a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.add-money-container button:hover {
+    background-color: #365e6c;
+}
+
+.add-money-container a {
+    color: #4f6d7a;
+    font-size: 14px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.add-money-container a:hover {
+    text-decoration: underline;
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .add-money-container {
+        width: 90%;
+    }
+}
+}
+
+/* Payment Page Background */
+.payment-page {
+    background-image: url('../images/bg2.jpg'); /* Replace with the correct path to your image */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh; /* Ensures the background covers the full page */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Payment Container */
+.payment-container {
+    width: 80%;
+    max-width: 500px;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background to see the image */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 80px;
+    text-align: center;
+    z-index: 1; /* To make sure it’s above the background */
+}
+
+.payment-container h2 {
+    color: #4f6d7a;
+    margin-bottom: 20px;
+}
+
+.payment-container label {
+    font-size: 16px;
+    margin-bottom: 5px;
+    display: block;
+    color: #333;
+}
+
+.payment-container input, .payment-container select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.payment-container button {
+    width: 100%;
+    padding: 12px;
+    background-color: #4f6d7a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.payment-container button:hover {
+    background-color: #365e6c;
+}
+
+.payment-container a {
+    color: #4f6d7a;
+    font-size: 14px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.payment-container a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .payment-container {
+        width: 90%;
+    }
+}
+
+
+/* Pay Bill Page Background */
+.pay-bill-page {
+    background-image: url('../images/bg2.jpg'); /* Replace with the correct path to your image */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh; /* Ensures the background covers the full page */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Pay Bill Container */
+.pay-bill-container {
+    width: 80%;
+    max-width: 500px;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 80px;
+    text-align: center;
+    z-index: 1;
+}
+
+.pay-bill-container h2 {
+    color: #4f6d7a;
+    margin-bottom: 20px;
+}
+
+.pay-bill-container label {
+    font-size: 16px;
+    margin-bottom: 5px;
+    display: block;
+    color: #333;
+}
+
+.pay-bill-container input, .pay-bill-container select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.pay-bill-container input[type="password"] {
+    font-family: 'Arial', sans-serif;
+}
+
+.pay-bill-container button {
+    width: 100%;
+    padding: 12px;
+    background-color: #4f6d7a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.pay-bill-container button:hover {
+    background-color: #365e6c;
+}
+
+.pay-bill-container a {
+    color: #4f6d7a;
+    font-size: 14px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.pay-bill-container a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .navbar nav {
+        margin-top: 10px;
+    }
+
+    .pay-bill-container {
+        width: 90%;
+    }
+}
+
+
+/* bKash to Bank Transfer Page Background */
+.bkash-to-bank-page {
+    background-image: url('../images/bg2.jpg'); /* Replace with the correct path to your image */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh; /* Ensures the background covers the full page */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* bKash to Bank Container */
+.bkash-to-bank-container {
+    width: 80%;
+    max-width: 500px;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 80px;
+    text-align: center;
+    z-index: 1;
+}
+
+.bkash-to-bank-container h2 {
+    color: #4f6d7a;
+    margin-bottom: 20px;
+}
+
+.bkash-to-bank-container label {
+    font-size: 16px;
+    margin-bottom: 5px;
+    display: block;
+    color: #333;
+}
+
+.bkash-to-bank-container input, .bkash-to-bank-container select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.bkash-to-bank-container input[type="password"] {
+    font-family: 'Arial', sans-serif;
+}
+
+.bkash-to-bank-container button {
+    width: 100%;
+    padding: 12px;
+    background-color: #4f6d7a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.bkash-to-bank-container button:hover {
+    background-color: #365e6c;
+}
+
+.bkash-to-bank-container a {
+    color: #4f6d7a;
+    font-size: 14px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.bkash-to-bank-container a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .navbar nav {
+        margin-top: 10px;
+    }
+
+    .bkash-to-bank-container {
+        width: 90%;
+    }
+}
+
+
+/* Cash Out Page Background */
+.cash-out-page {
+    background-image: url('../images/bg2.jpg'); /* Replace 'images/bg.jpg' with the correct path to your image */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh; /* Ensures the background covers the full page */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Cash Out Container */
+.cash-out-container {
+    width: 80%;
+    max-width: 500px;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background for content */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 80px;
+    text-align: center;
+    z-index: 1;
+}
+
+.cash-out-container h2 {
+    color: #4f6d7a;
+    margin-bottom: 20px;
+}
+
+.cash-out-container label {
+    font-size: 16px;
+    margin-bottom: 5px;
+    display: block;
+    color: #333;
+}
+
+.cash-out-container input, .cash-out-container select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.cash-out-container input[type="password"] {
+    font-family: 'Arial', sans-serif;
+}
+
+.cash-out-container button {
+    width: 100%;
+    padding: 12px;
+    background-color: #4f6d7a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.cash-out-container button:hover {
+    background-color: #365e6c;
+}
+
+.cash-out-container a {
+    color: #4f6d7a;
+    font-size: 14px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.cash-out-container a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .navbar nav {
+        margin-top: 10px;
+    }
+
+    .cash-out-container {
+        width: 90%;
+    }
+}
+
+
+/* Transaction History Page Background */
+.transaction-history-page {
+    background-image: url('../images/bg2.jpg'); /* Replace with the correct path to your image */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh; /* Ensures the background covers the full page */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Transaction History Container */
+.transaction-history-container {
+    width: 80%;
+    max-width: 900px;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background for content */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 80px;
+    text-align: center;
+    z-index: 1;
+}
+
+.transaction-history-container h2 {
+    color: #4f6d7a;
+    margin-bottom: 20px;
+}
+
+.transaction-history-container table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.transaction-history-container th, .transaction-history-container td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.transaction-history-container th {
+    background-color: #4f6d7a;
+    color: white;
+}
+
+.transaction-history-container td {
+    background-color: #f9f9f9;
+}
+
+.transaction-history-container td:nth-child(odd) {
+    background-color: #e3f2f9;
+}
+
+.transaction-history-container a {
+    color: #4f6d7a;
+    font-size: 14px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.transaction-history-container a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .navbar nav {
+        margin-top: 10px;
+    }
+
+    .transaction-history-container {
+        width: 90%;
+    }
+}
+
+/* Home Page Background */
+.home-page {
+    background-image: url('../images/bg2.jpg'); /* Add the correct path to your image */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh; /* Full height of the screen */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+}
+
+/* Center content */
+.container {
+    padding: 30px;
+    background: rgba(0, 0, 0, 0.6); /* Darken background for better contrast */
+    border-radius: 10px;
+    text-align: center;
+}
+
+.container h1 {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.container p {
+    font-size: 20px;
+    margin-bottom: 40px;
+    letter-spacing: 1px;
+}
+
+/* Button Styles */
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.btn {
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-radius: 30px;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.login-btn {
+    background: linear-gradient(135deg, #f06, #f90);
+    color: #fff;
+}
+
+.register-btn {
+    background: #fff;
+    color: #333;
+    border: 2px solid #4f6d7a;
+}
+
+.login-btn:hover, .register-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.register-btn:hover {
+    background: #f3f3f3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    .btn {
+        font-size: 16px;
+        padding: 12px 25px;
+    }
+}
+
+
+/* Login Page Background */
+.login-page {
+    background-image: url('../images/bg2.jpg'); /* Replace with your background image path */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh; /* Full height of the screen */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Authentication Container */
+.auth-container {
+    width: 100%;
+    max-width: 400px;
+    padding: 40px;
+    background: rgba(0, 0, 0, 0.7); /* Darken the background for contrast */
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.auth-container h2 {
+    color: #fff;
+    margin-bottom: 20px;
+    font-size: 32px;
+}
+
+.auth-container .input-group {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.auth-container .input-group input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background: #fff;
+    color: #333;
+}
+
+.auth-container .input-group i {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #888;
+}
+
+.auth-container button {
+    width: 100%;
+    padding: 12px;
+    background-color: #4f6d7a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.auth-container button:hover {
+    background-color: #365e6c;
+}
+
+.auth-container .forgot-password-link {
+    margin-top: 20px;
+}
+
+.auth-container .forgot-password-link a {
+    color: #ddd;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.auth-container .forgot-password-link a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .auth-container {
+        padding: 30px;
+        width: 90%;
+    }
+
+    .auth-container h2 {
+        font-size: 28px;
+    }
+}
+
+/* Register Page Background */
+.register-page {
+    background-image: url('../images/bg2.jpg'); /* Add your background image path */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh; /* Full height of the screen */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Authentication Container */
+.auth-container {
+    width: 100%;
+    max-width: 400px;
+    padding: 30px;
+    background: rgba(0, 0, 0, 0.7); /* Darken the background for contrast */
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+    margin-top: 30px;
+}
+
+.auth-container h2 {
+    color: #fff;
+    margin-bottom: 20px;
+    font-size: 28px; /* Reduce font size */
+}
+
+/* Input Group */
+.auth-container .input-group {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.auth-container .input-group input,
+.auth-container .input-group textarea {
+    width: 100%;
+    padding: 12px 15px 12px 40px; /* Adjust padding to create space for the icon */
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background: #fff;
+    color: #333;
+    box-sizing: border-box;
+}
+
+.auth-container .input-group textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* Icon Styling */
+.auth-container .input-group i {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #888;
+}
+
+/* Button Styling */
+.auth-container button {
+    width: 100%;
+    padding: 12px;
+    background-color: #4f6d7a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.auth-container button:hover {
+    background-color: #365e6c;
+}
+
+/* Register Link */
+.auth-container p {
+    color: #ddd;
+}
+
+.auth-container p a {
+    color: #4f6d7a;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.auth-container p a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .auth-container {
+        padding: 30px;
+        width: 90%;
+    }
+
+    .auth-container h2 {
+        font-size: 24px;
+    }
+
+    .auth-container .input-group input,
+    .auth-container .input-group textarea {
+        padding-left: 35px; /* Ensure adequate space for icons on mobile */
+    }
+}
+
+/* Navbar */
+.navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background: linear-gradient(135deg, #3b7c8b, #88a2b5); /* Gradient Background */
+    color: white;
+    position: fixed;
+    top: 2px;
+    left: 0;
+    border-radius: 30px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); /* Subtle Shadow */
+    z-index: 10;
+}
+
+.navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.navbar nav {
+    display: flex;
+    gap: 20px;
+}
+
+.navbar nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;  /* Make text bold */
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+.navbar nav a:hover {
+    color: #ff7a00;  /* Highlight on hover */
+}
+
+/* Logout Button */
+.logout-btn {
+    background-color: white;
+    color: #4f6d7a;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 30px; /* Rounded Button */
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.logout-btn:hover {
+    background-color: #e3e9f0;
+    transform: scale(1.05);
+}
+
+/* To fix the underline issue and button sizing */
+.navbar a {
+    text-decoration: none !important; /* Prevent underline */
+    font-size: 16px;
+}
+
+
+/* Final Fix for Profile Picture Crop */
+.profile-picture-top {
+    position: absolute;
+    top: 10px;
+    right: 200px;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 6px solid white;
+    background-color: #fff;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+    overflow: hidden;
+    z-index: 5;
+    transition: transform 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-picture-top:hover {
+    transform: scale(1.08);
+}
+
+.profile-picture-top img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;   /* 🔥 Ensures it fills the round box */
+    border-radius: 50%;  /* 🔥 Clip it perfectly circular */
+}
+
+
+
+
